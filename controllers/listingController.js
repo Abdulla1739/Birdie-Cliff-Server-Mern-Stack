@@ -25,28 +25,28 @@ exports.listingFullController = async (req, res) => {
   } = req.body;
 
   const listingPhotos = req.files;
-  console.log(listingPhotos);
-  console.log(
-    creator,
-    category,
-    type,
-    streetAddress,
-    aptSuite,
-    city,
-    province,
-    country,
-    guestCount,
-    bedroomCount,
-    bedsCount,
-    bathroomCount,
-    amenities,
-    title,
-    description,
-    highlight,
-    highlightDesc,
-    price,
-    listingPhotos
-  );
+  // console.log(listingPhotos);
+  // console.log(
+  //   creator,
+  //   category,
+  //   type,
+  //   streetAddress,
+  //   aptSuite,
+  //   city,
+  //   province,
+  //   country,
+  //   guestCount,
+  //   bedroomCount,
+  //   bedsCount,
+  //   bathroomCount,
+  //   amenities,
+  //   title,
+  //   description,
+  //   highlight,
+  //   highlightDesc,
+  //   price,
+  //   listingPhotos
+  // );
   try {
     if (!listingPhotos || listingPhotos.length === 0) {
       return res.status(400).send("No file uploaded.");
@@ -90,7 +90,7 @@ exports.listingFullController = async (req, res) => {
 exports.listingByCategoryController = async (req, res) => {
   console.log("inside listing by category");
   const qCategory = req.query.category;
-  console.log(qCategory);
+  // console.log(qCategory);
   try {
     let listings;
     if (qCategory) {
